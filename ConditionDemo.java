@@ -77,15 +77,15 @@ public class ConditionDemo{
 			case 3:
 			case 4:
 			case 5:
-			System.out.println("上班");
-			break;//注意break
+				System.out.println("上班");
+				break;//注意break
 			case 6:
 			case 7:
-			System.out.println("睡觉");
-			break;
+				System.out.println("睡觉");
+				break;
 			default:
-			System.out.println("输入错误");
-			 break;
+				System.out.println("输入错误");
+				break;
 		}
 		
 		
