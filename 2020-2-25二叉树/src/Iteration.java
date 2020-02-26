@@ -50,6 +50,7 @@ public class Iteration {
         }
         return ret;
     }
+    //后序遍历
     public List<Integer> postorderTraversal(TreeNode root) {
         Stack<TreeNode>stack=new Stack<>();
         List<Integer>ret=new ArrayList<>();
