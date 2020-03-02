@@ -1,6 +1,7 @@
 import java.util.Stack;
 
 public class ValidBST {
+    //验证二叉搜索树
     //按照二叉搜索树的性质中序遍历 判断栈顶元素大小
     public boolean isValidBST(TreeNode root) {
         Stack<TreeNode>stack=new Stack<>();
