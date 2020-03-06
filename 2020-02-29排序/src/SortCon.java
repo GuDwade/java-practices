@@ -56,11 +56,11 @@ public class SortCon {
                 }
             }
         }
-        */
+       */
         int len=array.length;
         while(len>0){
             boolean flag=true;
-            for(int i=0;i<array.length-1-i;i++){
+            for(int i=0;i<len-1;i++){
                 if(array[i]>array[i+1]){
                     swap(array,i,i+1);
                     flag=false;
@@ -72,7 +72,6 @@ public class SortCon {
             }
             len--;
         }
-
     }
 
     public static int partition(int[] array, int left, int right) {
@@ -105,14 +104,14 @@ public class SortCon {
     }
     public static void main(String[] args) {
         int[]arr={3,5,16,17,4,20};
+        int[]arr1=arr.clone();
+        int[]arr2=arr.clone();
         createHeap(arr);
         System.out.println(Arrays.toString(arr));
         heapSort(arr);
         System.out.println(Arrays.toString(arr));
-        int[]arr1=arr.clone();
         bubbleSort(arr1);
         System.out.println(Arrays.toString(arr1));
-        int[]arr2=arr.clone();
         quickSort(arr2,0,arr2.length-1);
         System.out.println(Arrays.toString(arr2));
     }
