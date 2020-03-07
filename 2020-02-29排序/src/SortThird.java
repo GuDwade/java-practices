@@ -8,6 +8,12 @@ public class SortThird {
         arr[j] = tmp;
     }
     //快排 递归
+     /*
+        快排递归：
+        时间复杂度：O(nlogn)    最坏时间复杂度： 没有优化之前 O(n^2)
+        稳定性：不稳定  基准值的位置进行交换的时候有可能改变相同元素的相对位置
+        空间复杂度：logn
+     */
     public static void quickSort(int[] arr, int left, int right){
         if(left < right){
             // int mid = partition(arr, left, right);
