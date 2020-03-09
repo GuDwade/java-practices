@@ -13,7 +13,7 @@ public class Test {
         // 连接数据库的密码
         String password="";
         Connection connection=DriverManager.getConnection(ur1,user,password);
-        System.out.println(connection);
+        //System.out.println(connection);
 
         // 从 Scanner 中不停的读 SQL，并执行
         Scanner scanner = new Scanner(System.in);
@@ -46,6 +46,7 @@ public class Test {
 
             statement.close();
         }
+        //4. 关闭连接
         connection.close();
     }
 }
