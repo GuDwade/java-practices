@@ -15,7 +15,7 @@ class Node {
     }
 }
 public class Problems {
-    
+
     public Node copyRandomList(Node head) {
         if(head==null){
             return head;
