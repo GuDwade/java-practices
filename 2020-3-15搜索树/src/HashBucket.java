@@ -53,4 +53,51 @@ public class HashBucket {
         ++size;
         return -1;
     }
+    public void resize(){
+        Node[]newArray=new Node[array.length*2];
+        //元素搬移       长度变化  idx改变  不能简单复制
+        for(int i=0;i<array.length;i++){
+            Node curHead=array[i];
+            while(curHead!=null){
+                Node next=curHead.next;
+                //头插
+                int idx=curHead.key%newArray.length;
+                curHead.next=newArray[idx];
+                newArray[idx]=curHead;
+                curHead=next;
+            }
+        }
+        array=newArray;
+    }
+    public int get(int key){
+        int idx=key%array.length;
+        Node cur=array[idx];
+
+        while(cur!=null){
+            if(cur.key==key){
+                return  cur.value;
+            }
+            cur=cur.next;
+        }
+        return -1;
+    }
+
+    public int remove(int key){
+        int idx=key%array.length;
+        Node prev=null;
+        Node cur=array[idx];
+        while(cur!=null){
+            if(cur.key==key){
+                if(prev==null){
+                    array[idx]=cur.next;
+                }else {
+                    prev.next=cur.next;
+                }
+                return cur.value;
+            }
+            prev=cur;
+            cur=cur.next;
+        }
+        return  -1;
+    }
 }
