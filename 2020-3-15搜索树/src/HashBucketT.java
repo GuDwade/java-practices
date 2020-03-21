@@ -18,6 +18,7 @@ class  A{
 
     @Override
     public int hashCode() {
+
         return Objects.hash(name, age);
     }
 
