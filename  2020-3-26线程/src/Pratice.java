@@ -82,6 +82,6 @@ public class Pratice {
             FibThread thread=new FibThread(x);    // 重新启动一个线程，去计算 fib(n)
             thread.start();
         }
-        
+
     }
 }

@@ -48,19 +48,19 @@ public class SortDemo {
     */
     public static void shellSort(int[] array) {
         int gap=array.length;
-        while(gap>1){
-            //最后一次gap==1 结束
-            gap=gap/3+1;
-            for(int i=0;i<array.length-gap;i++){
-                //i: 表示已排序数据的最后一个位置
-                int end=i;
-                int val=array[end+gap];
-                while(i>=0&&array[end]>val){
-                    array[end+gap]=array[end];
-                    end-=gap;
+            while(gap>1){
+                //最后一次gap==1 结束
+                gap=gap/3+1;
+                for(int i=0;i<array.length-gap;i++){
+                    //i: 表示已排序数据的最后一个位置
+                    int end=i;
+                    int val=array[end+gap];
+                    while(i>=0&&array[end]>val){
+                        array[end+gap]=array[end];
+                        end-=gap;
+                    }
+                    array[end+gap]=val;
                 }
-                array[end+gap]=val;
-            }
         }
     }
     /*选择排序：
