@@ -22,6 +22,7 @@ public class 线程的优势_提升速度 {
 
     // 主线程一个线程在计算
     public static void main(String[] args) throws InterruptedException {
+
         long start = System.nanoTime();
 
         CalcThread[] threads = new CalcThread[N - 1];

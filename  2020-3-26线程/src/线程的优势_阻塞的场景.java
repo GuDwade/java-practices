@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class 线程的优势_阻塞的场景 {
-    // 时间复杂度: O(2^n)
+
     private static long fib(int n) {
         if (n < 2) {
             return n;
