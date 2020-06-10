@@ -6,7 +6,7 @@ public class 遍历目录下的所有文件 {
     public static void main(String[] args) {
         String path = "D:\\Code\\java\\java-pratices\\2020-4-9FilePratice";
         File root = new File(path);
-        
+
         深度优先的遍历(root);
         广度优先的遍历(root);
     }
